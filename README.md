@@ -40,18 +40,18 @@ Manual of connecting USB method is in below link.
 * If you want, you can change port number by editing 'PowerTablet_WIFI_Port.txt' file.
 * Run PowerTablet.exe and press 'W' key on the first menu.
 * Remember IP address and Port number (This IP address is usually your local IP of WIFI).  
-  <img src="README_source/img_zip_file_list.png">  
+  <img src="README_source/img_pc_wifi_address.png">  
   In this case, you can connect to PC by using 192.168.0.101:49502 address. If program shows multiple addresses, you have to use WIFI address. Note that WIFI address usually start with 192.168 and so on. You can also check IP address manually at Windows CMD program by 'ipconfig' command.
 * Run android PowerTablet, Press WIFI button, type IP address and port number, press 'Connect' button.  
-  <img src="README_source/img_zip_file_list.png">  
+  <img src="README_source/img_android_wifi_address.png">  
   Then android PowerTablet displays ON at WIFI button.  
   <img src="README_source/img_android_wifi_on.png">  
   PC program displays like this.  
   <img src="README_source/img_pc_wifi_success.png">  
   The connection is completed when PC program says 'Successfully applied settings'.  
-  If connection fails, check IP address and port number again, check whether PC's firewall is blocking network of PowerTablet.  
-  PowerTablet use one-way communication for low latency, so even if connection fails, android PowerTablet says connection on and send data to wrong IP address. Therefore you should check whether connection is completed at PC side.  
-  If your PC uses public IP directly, or uses public WIFI to which anyone can access, using PowerTablet WIFI method is not recommended. In this case, anyone can access to your PC using PowerTablet.
+  **If connection fails, check IP address and port number again, check whether PC's firewall is blocking network of PowerTablet.**  
+  PowerTablet use one-way communication for low latency, so even if connection fails, android PowerTablet says connection on and send data to wrong IP address. **Therefore you should check whether connection is completed at PC side.**  
+  **If your PC uses public IP directly, or uses public WIFI to which anyone can access, using PowerTablet WIFI method is not recommended.** In this case, anyone can access to your PC using PowerTablet.
 
 ## \<Setting up connection with ADB method\>
 * Install default USB driver depends on your device. This is not required in most cases.
@@ -92,18 +92,18 @@ PowerTablet main interface looks like this.
 * The lower-right light gray region is mouse wheel(center) button.
 * The main region in center is called 'Tablet Region', used for tablet or touchpad.
 
-If you press 'SET&MORE' button, interface looks like this.  
-<img src="README_source/img_android_settings1.png">  
-In this menu, you can manage settings, rotate screen, or run additional mode.  
-'MODE' button at left side is working when PowerTablet is connected with PC. It displays current mode(Absolute or relative), also you can change mode with this button.  
-'WIFI' button is used for WIFI connection method, this can open WIFI IP setting interface, close WIFI IP setting interface, close WIFI connection when connection is on.  
-'USB' button is used for USB connection method, connecting or disconnecting.  
-'ADB' button is used for ADB connection method, connecting or disconnecting.  
-'KEY' button is used for displaying keyboard, like this.  
-<img src="README_source/img_android_keyboard.png">  
-It uses custom layout keyboard instead of android's keyboard, to simulate PC keyboard and send key input directly to PC.  
-CTRL, SHIFT, ALT key is toggle-key, and you can display numberpad using 'NUM TOG' button at upper-left.  
-Note that this keyboard is designed for english/korean layout, so some special key may be incompatible. This might be updated with more layout with later version of PowerTablet.
+* If you press 'SET&MORE' button, interface looks like this.  
+  <img src="README_source/img_android_settings1.png">  
+  In this menu, you can manage settings, rotate screen, or run additional mode.
+* 'MODE' button at left side is working when PowerTablet is connected with PC. It displays current mode(Absolute or relative), also you can change mode with this button.
+* 'WIFI' button is used for WIFI connection method, this can open WIFI IP setting interface, close WIFI IP setting interface, close WIFI connection when connection is on.
+* 'USB' button is used for USB connection method, connecting or disconnecting.
+* 'ADB' button is used for ADB connection method, connecting or disconnecting.
+* 'KEY' button is used for displaying keyboard, like this.  
+  <img src="README_source/img_android_keyboard.png">  
+  It uses custom layout keyboard instead of android's keyboard, to simulate PC keyboard and send key input directly to PC.  
+  CTRL, SHIFT, ALT key is toggle-key, and you can display numberpad using 'NUM TOG' button at upper-left.  
+  Note that this keyboard is designed for english/korean layout, so some special key may be incompatible. This might be updated with more layout with later version of PowerTablet.
 
 
 ---
@@ -114,7 +114,7 @@ You can load and save settings in your android device using 'LOAD' and 'SAVE' bu
 If you press 'APPLY' button, this will send settings PC and close settings interface.  
 > Also this button can display absolute mode input region, regardless of whether PC is connected or not, like this.  
 > <img src="README_source/img_android_abs_region.png">  
-> (The regiono includes line too)  
+> (The region includes line too)  
 > Also this button can be used for recover specific settings to default value, regardless of whether PC is connected or not. If editboxs of settings are empty, it will be recovered.
 
 You can run direct input mode or root mode using corresponding buttons.  
@@ -122,6 +122,7 @@ You can rotate screen using corresponding button.
 
 ## \<Absolute mode\>
 <img src="README_source/img_android_settings_abs.png">  
+
 You can set absolute mode input region at 'Absolute Position Settings'. There are center position of X, center position of Y, range of X, ratio of input range. It is recommended to set ratio of input range to your PC display ratio. If you put negative number in 'Range of X', input position will be reversed. If you put negative number in ONE of the 'Ratio of Input Range', input position of Y-axis will be reversed.  
 In absolute mode, you cannot use gesture.  
 If "Hovering when Absolute Mode" is off, 'Tablet Region' do not support mouse click, so you have to use upper-left light gray region.  
@@ -129,6 +130,7 @@ If "Hovering when Absolute Mode" is on, it works like normal tablet. Hovering wi
 
 ## \<Relative mode (like touchpad)\>
 <img src="README_source/img_android_settings_rel.png">  
+
 You can set relative mode sensitivity at 'Relative Mode Sensitivity Settings'. And you can set gesture settings at "Relative Mode Gesture Settings" (Will be explained later).  
 There are sensitivity of X, sensitivity of Y, acceleration. If you put same number at X and Y sensitivity, the moving ratio of X-axis and Y-axis are same regardless of PC display ratio. If you set acceleration to 0, it will disable acceleration. If you set acceleration over 0, the mouse movement will much faster by how much your touch movement is fast. If you want set acceleration, then 0.5~1 value is recommended.  
 And please note that, in relative mode, final sensitivity is affected by Windows PC mouse sensitivity and acceleration.
@@ -147,11 +149,12 @@ First is mouse left click using short tap.
 Second is mouse double click using short double tap.  
 The last one is mouse left click and moving, using short tap and dragging.  
 <img src="README_source/img_android_settings_gesture.png">  
-You can set maximum recognition time and maximum move of click, of these gestures. This means that if you touch and touch-out 'Tablet Region' within recognition time without moving maximum move pixel, that will be one 'tap' of gesture. If you set time to 0, this will disable gestures.  
+You can set maximum recognition time and maximum move of click, of these gestures. This means that if you touch and touch-out 'Tablet Region' within recognition time without moving more than maximum move pixel, that will be one 'tap' of gesture. If you set time to 0, this will disable gestures.  
 And, PowerTablet also supports special gesture. You can change sensitivity temporally when you touch-up and touch-down in short time while dragging. In generally, you can use this gesture to delicately move mouse cursor, when mouse acceleration is disabled. I will call this to ReTouch gesture. You can set maximum recognition time and ReTouch Sensitivity multiplication. Set time to 0 to disable ReTouch gesture.
 
 ## \<Area Expand\>
 <img src="README_source/img_android_settings_areaexpand.png">  
+
 Area Expand feature helps to use more large area in absolute mode.
 <img src="README_source/img_android_abs_region.png">  
 In generally, the input area of absolute mode is in the 'Tablet Region' (rectangle line of picture). But actually you can set input area outside of 'Tablet Region' at 'Absolute Position Settings'. In this case, normally you cannot use input region which is in outside of 'Tablet Region'. But you can touch that region if you set 'Area Expand', by ignoring other buttons like mouse button region or 'WIFI' 'USB' buttons.  
@@ -161,8 +164,8 @@ The ADB-Expand mode can be run by pressing 'RUN ADB-EXPAND MODE', which is appea
 
 ---
 # Additional WARNING
-If your PC uses public IP directly, or uses public WIFI to which anyone can access, using Powertablet WIFI method is not generally recommended. In this case, anyone can access to your PC using Powertablet. Recommend to configure firewall manually (only accept your android device's IP address of PowerTablet's port number) in such case.  
-PowerTablet does not have encryption, regardless of connection method. It is possible that other people can figure out your keyboard and mouse data generated by PowerTablet, if one hack your PC. So do not type important personal data using PowerTablet.  
-PC program of PowerTablet does not require administrator privilege. But if another program runs in administrator privilege, you cannot use PowerTablet in that program. In this case, you can run PowerTablet in administrator privilege. Also, PowerTablet doesn't work in UAC control window generally (the pop-up window that require administrator privilege).  
-If PowerTablet is disconnected while you press some keyboard of mouse click, state of the key remain pressed (because PowerTablet doesn't send key out event). In this case, you can just press that key again to solve it.  
-Android PowerTablet does not guarantee the application keep running in some situation. like incomming call. This mean PowerTablet can be interrupted while using it.
+* **If your PC uses public IP directly, or uses public WIFI to which anyone can access, using Powertablet WIFI method is not generally recommended. In this case, anyone can access to your PC using Powertablet.** Recommend to configure firewall manually (only accept your android device's IP address of PowerTablet's port number) in such case.
+* **PowerTablet does not have encryption, regardless of connection method. It is possible that other people can figure out your keyboard and mouse data generated by PowerTablet, if one hack your PC. Therefore do not type important personal data using PowerTablet.**
+* PC program of PowerTablet does not require administrator privilege. But if another program runs in administrator privilege, you cannot use PowerTablet in that program. In this case, you can run PowerTablet in administrator privilege. Also, PowerTablet doesn't work in UAC control window generally (the pop-up window that require administrator privilege).
+* If PowerTablet is disconnected while you press some keyboard of mouse click, state of the key remain pressed (because PowerTablet doesn't send key out event). In this case, you can just press that key again to solve it.
+* Android PowerTablet does not guarantee the application keep running in some situation. like incomming call. This mean PowerTablet can be interrupted while using it.
