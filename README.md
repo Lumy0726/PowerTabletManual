@@ -51,7 +51,7 @@ Manual of connecting USB method is in below link.
   The connection is completed when PC program says 'Successfully applied settings'.  
   **If connection fails, check IP address and port number again, check whether PC's firewall is blocking network of PowerTablet.**  
   PowerTablet use one-way communication for low latency, so even if connection fails, android PowerTablet says connection on and send data to wrong IP address. **Therefore you should check whether connection is completed at PC side.**  
-  **If your PC uses public IP directly, or uses public WIFI to which anyone can access, using PowerTablet WIFI method is not recommended.** In this case, anyone can access to your PC using PowerTablet.
+  **If your PC uses public IP directly, or uses public WIFI to which anyone can access, using PowerTablet WIFI method is not recommended.** In this case, anyone can access to your PC using PowerTablet. You can configure firewall manually if you need.
 
 ## \<Setting up connection with ADB method\>
 * Install default USB driver depends on your device. This is not required in most cases.
