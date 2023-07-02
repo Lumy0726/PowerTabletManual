@@ -78,7 +78,14 @@ Manual of connecting USB method is in below link.
   <img src="README_source/img_adb_device_input.png">  
   You can see input devices and some value of your input data. So you can determine what is touch or pen input device. Press any key to stop this, and type the number of input device like this.  
   <img src="README_source/img_adb_device_manually.png">  
-  In this case, touch device number is 1 and stylus pen device number is 4. You can just enter to skip one of the device. Note that using incorrect devices may not work properly. Especially, changing the number of touch device and input device will not work. If PC PowerTablet says 'Setup ADB complete' like this, ADB connection works well (but not fully completed).  
+  In this case, touch device number is 1 and stylus pen device number is 4. You can just enter to skip one of the device. Note that using incorrect devices may not work properly. Especially, changing the number of touch device and input device will not work. If PC PowerTablet says 'Setup ADB complete' like this, ADB connection works well (but not fully completed).
+* \<Troubleshooting ADB unauthorized connection\>  
+  For some reason ADB connection may failed due to unauthorized connection.  
+  To solve this problem, follow these steps and try again.  
+  Disconnect your android device.  
+  Open task manager on Windows and kill adb.exe process.  
+  In android 'Developer options', turn off and turn on 'USB debugging'.
+  
 
 
 ---
